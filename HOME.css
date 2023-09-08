@@ -81,6 +81,12 @@ hr{
     height: 50em;
     background-color: aquamarine;
 }
+.abt-us{
+    font-size: calc(1.375rem + 1.5vw);
+    width: 5em;
+    margin: auto;
+    padding-top: 1em;
+}
 
 
 

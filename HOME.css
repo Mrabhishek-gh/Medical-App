@@ -6,8 +6,8 @@ hr{
     border-style: dotted none none none;
     border-color: #000000;
     border-width: 8px;
-    width: 50%;
-    margin: auto;
+    width: 4%;
+    margin: 5em auto 2em auto;
     opacity: 1;
 }
 
@@ -78,22 +78,56 @@ hr{
 
 .container2{
     width: 100%;
-    height: 50em;
-    background-color: aquamarine;
+    height: 26em;
 }
-.abt-us{
+
+.box1{
+    position: absolute;
+    width: 100%;
+    height: 26em;
+    margin-top: 50px;
+}
+
+.abt-us1{
     font-size: calc(1.375rem + 1.5vw);
     width: 5em;
     margin: auto;
-    padding-top: 1em;
+    margin-bottom: 1em;
+}
+
+.abt{
+    margin-left: 13em;
+    margin-right: 13em;
+    text-align: justify;
 }
 
 
 
 
+/* ///////////////////////////////////////////////////////////////////////////////////////////////// */
 
 
 
+.container3{
+    width: 100%;
+    height: 26em;
+}
+
+
+
+.abt-us2{
+    font-size: calc(1.375rem + 1.5vw);
+    width: 26em;
+    margin: 5px auto 2em auto;
+    margin-bottom: 1em;
+}
+
+.app-form{
+    width: 39%;
+    margin: 5px auto 2em auto;
+    background: #ffffff;
+    align-items: center;
+}
 
 
 

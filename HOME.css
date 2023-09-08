@@ -1,0 +1,45 @@
+body{
+    margin: 0px;
+    text-align: center;    
+}
+
+.logo{
+    width: 1.8em;
+}
+.name{
+    margin-left: 1px;
+    margin-bottom: 7px;
+}
+
+.nav-items{
+    text-align: left;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* @media (max-width: 1250px){
+    .logo{
+        width: 1em;
+    }
+} */

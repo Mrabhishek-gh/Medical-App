@@ -1,0 +1,61 @@
+/* about.css */
+
+/* Style the "About Us" section */
+#about-section {
+    background-color: #f9f9f9;
+    padding: 20px;
+    text-align: center;
+}
+
+h2 {
+    color: #0d0961;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #666;
+}
+
+#appointment-section{
+    background-color: #f9f9f9;
+    padding: 16px;
+    text-align: center;
+}
+
+form {
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;
+}
+
+/* Optional: Center the submit button */
+input[type="submit"] {
+    margin-top: 10px; /* Adjust this value as needed for spacing */
+} */
+
+#feedback-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+#feedback-button button {
+    background-color: #4c4f52;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#feedback-button button:hover {
+    background-color: #0056b3;
+}
+#feedback-form{
+    text-align: center;
+}
+
+
+
+
+

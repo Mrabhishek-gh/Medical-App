@@ -13,11 +13,13 @@ body {
 
 .service-box {
     
+    width: 19em;
     border-radius: 8px;
+    border: 2px solid rgb(109, 113, 109);
     padding: 20px;
     margin: 20px;
-    text-align: center;
-    transition: transform 0.3s;
+    text-align: justify;
+    transition: transform 0.3s ease 0s;
 }
 
 .service-box:hover {

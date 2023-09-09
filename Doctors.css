@@ -1,5 +1,5 @@
 .doctor-card {
-    border: 1px solid #ccc;
+    border: 10px solid #0d0101;
     border-radius: 50px;
     padding: 20px;
     text-align: left;
@@ -9,21 +9,12 @@
     margin: 10px;
     display: table-footer-group;
 }
-.doctor-card {
-    display: table-row;
-    align-items: center; /*Vertically center the image and text */
-    width: 200px;
-    margin: 0 auto;
-    padding: 50px;
-    border: 1px solid #ccc;
-}
-
 .doctor-card img {
-    max-width: 500px;
+    
     border-radius: 10%;
     margin-bottom: 20px;
     max-height: 200px;
-    max-width: 100px;
+    max-width: 200px;
     margin-top: 30px;
     margin-bottom: 20px;
     

@@ -39,37 +39,37 @@
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <img class="logo" src="/images/medicine.png" alt="logo"><a class="navbar-brand mr-auto" href="#">MEDLAB</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="HOME.html">HOME</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">SERVICES</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">DOCTORS</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">DEPARTMENTS</a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="./Departments/Pathology.html">Pathology</a></li>
-                  <li><a class="dropdown-item" href="./Departments/Neurology.html">Neurology</a></li>
-                  <li><a class="dropdown-item" href="./Departments/Cardiology.html">Cardiology</a></li>
-                  <li><a class="dropdown-item" href="./Departments/Radiology.html">Radiology</a></li>
-                  <li><a class="dropdown-item" href="./Departments/Gastroenterology.html">Gastroenterology</a></li>
-                </ul>
-              </li>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+        <img class="logo" src="/images/medicine.png" alt="logo"><a class="navbar-brand mr-auto" href="#">MEDLAB</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="HOME.html">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">SERVICES</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">DOCTORS</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">DEPARTMENTS</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="./Departments/Pathology.html">Pathology</a></li>
+              <li><a class="dropdown-item" href="./Departments/Neurology.html">Neurology</a></li>
+              <li><a class="dropdown-item" href="./Departments/Cardiology.html">Cardiology</a></li>
+              <li><a class="dropdown-item" href="./Departments/Radiology.html">Radiology</a></li>
+              <li><a class="dropdown-item" href="./Departments/Gastroenterology.html">Gastroenterology</a></li>
             </ul>
-          </div>
-        </div>
-      </nav>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
     
     <div class="container1">
       <!-- <div class="quotes">
@@ -118,26 +118,43 @@
       </section>
     </div>
   </div>
+
+  <hr>
+
+
     <div class="container3">
     <section id="appointment-section">
       <h2 class="abt-us2">MAKE AN APPOINTMENT WITH OUR GENERAL DOCTOR</h2>
     </section>
-    <form class="app-form">
-        
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required><br><br>
-    
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required><br><br>
-    
-      <label for="date">Appointment Date:</label>
-      <input type="date" id="date" name="date" required><br><br>
-    
-      <label for="message">Additional Information:</label><br>
-      <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
-    
-      <input type="submit" value="Submit">
-    
-    </form>
-    </div>
+
+    <div class="Outerbox">
+   
+      <div id="general">
+      
+          <section id="subscription" class="widget">
+              <form  method="post" action="/">
+             
+                  <label class="font" for="Username">Name</label>
+             
+                  <input class="size" type="Name" id="Username" name="Username" required>
+  
+                  <label class="font" for="Email">Email-ID</label>
+                  
+                  <input type="Email" id="Email" name="Email" required placeholder="abc@gmail.com">
+
+                  <label class="font" for="Phone-number">Phone Number</label>
+             
+                  <input class="size" type="number" id="Number" name="Number" required>
+
+                  <label class="font" for="message">ADDRESS:</label><br>
+
+                  <textarea id="message" name="message" rows="3" cols="45"></textarea>
+             
+                  <button class="submit btn1">SUBMIT</button>  
+              </form>
+          </section>
+          </div>
+      </div>
+
+      <hr>
 </html>

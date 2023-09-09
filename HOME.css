@@ -25,6 +25,10 @@ hr{
     position: sticky;
     z-index: 4;
 }
+#navbar a:hover {
+    background-color: #ddd;
+    color: black;
+  }
 
 
 
@@ -125,9 +129,9 @@ hr{
 
 
 .abt-us2{
-    font-size: calc(1.375rem + 1.5vw);
-    width: 26em;
-    margin: 5px auto 2em auto;
+    font-size: 3em;
+    width: 16em;
+    margin: 1em auto 2em auto;
     margin-bottom: 1em;
 }
 
@@ -222,6 +226,61 @@ hr{
     border-radius: 18px;
     margin-top:5px; 
  }
+
+
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+
+
+.container4{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.service-box {
+    
+    width: 19em;
+    border-radius: 8px;
+    border: 2px solid rgb(109, 113, 109);
+    padding: 20px;
+    margin: 20px;
+    text-align: justify;
+    transition: transform 0.3s ease 0s;
+}
+
+.service-box:hover {
+    transform: scale(1.05);
+}
+
+.service-box h3 {
+    color:#16595B;
+        font-size: 24px;
+}
+
+.service-box p {
+    font-size: 16px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+.center-heading {
+    color: #16595B;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.service-box svg {
+    width: 50px;
+    height: 50px;
+    fill: #3FBBC0; /* Icon color */
+    margin-bottom: 10px; /* Adjust as needed */
+}
 
 
 

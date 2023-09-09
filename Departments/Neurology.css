@@ -5,6 +5,33 @@
   body {
     font-family: Arial, Helvetica, sans-serif;
   }
+
+  body{
+    margin: 0px;
+}
+
+hr{
+    border-style: dotted none none none;
+    border-color: #000000;
+    border-width: 8px;
+    width: 50%;
+    margin: auto;
+    opacity: 1;
+}
+
+.logo{
+    width: 1.8em;
+}
+
+.navbar-nav{
+    text-align: left;
+}
+
+.navbar{
+    z-index: 2;
+    }
+
+
   
   /* Float four columns side by side */
   .column {
@@ -15,10 +42,12 @@
   
   /* Remove extra left and right margins, due to padding in columns */
   .row {
-    margin-left: 3.5em;
-    margin-right: 3.5em;
-    margin-top: 3em;
-}
+    display: flex;
+    align-content: space-between;
+    width: 59em;
+    margin: 10em auto 0px auto;
+    gap: 5em;
+  }
   /* Clear floats after the columns */
   .row:after {
     content: "";

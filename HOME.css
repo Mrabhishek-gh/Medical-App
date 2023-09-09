@@ -6,16 +6,15 @@ hr{
     border-style: dotted none none none;
     border-color: #000000;
     border-width: 8px;
-    width: 50%;
-    margin: auto;
+    width: 4%;
+    margin: 5em auto 3em auto;
     opacity: 1;
-}
-
+}   
 .logo{
     width: 1.8em;
 }
 
-.navbar-nav{
+.nav-items{
     text-align: left;
 }
 
@@ -32,15 +31,17 @@ hr{
 
 .container1{
     max-width: 100%;
-    height: fit-content;
+    height: 45em;
+    background-color: #343a40;
+    margin-top: -3em;
 }
 
 .carousel{
-    position: relative;
-    width: 100%;
-    margin: auto;
-
+    position: absolute;
+    width: 98%;
+    margin: 4em 1em 1em 1em;
 }
+
 
 .carousel-inner{
      height: 40em;
@@ -78,21 +79,146 @@ hr{
 
 .container2{
     width: 100%;
-    height: 50em;
-    background-color: aquamarine;
+    height: 26em;
 }
-.abt-us{
+
+.box1{
+    position: absolute;
+    width: 100%;
+    height: 24em;
+    margin-top: 27px;
+    border: 2px solid rgb(109, 113, 109);
+    padding-top: 16px;
+    border-radius: 20em;
+}
+
+.abt-us1{
     font-size: calc(1.375rem + 1.5vw);
     width: 5em;
     margin: auto;
-    padding-top: 1em;
+    margin-bottom: 1em;
+}
+
+.abt{
+    margin-left: 13em;
+    margin-right: 13em;
+    text-align: justify;
 }
 
 
 
 
+/* ///////////////////////////////////////////////////////////////////////////////////////////////// */
 
 
+
+.container3{
+    width: 100%;
+    height: 26em;
+    margin-top: 5em;
+
+}
+
+
+
+.abt-us2{
+    font-size: calc(1.375rem + 1.5vw);
+    width: 26em;
+    margin: 5px auto 2em auto;
+    margin-bottom: 1em;
+}
+
+.app-form{
+    width: 39%;
+    margin: 5px auto 2em auto;
+    background: #ffffff;
+    align-items: center;
+}
+
+.Outerbox{
+    margin-left: auto;
+    margin-right: auto;
+    width: 50em;
+    margin-top: 5em;
+    margin-bottom: auto;
+
+}
+#general{
+    width: 51%;
+    border-radius: 3%;
+    background-color: #ffffff;
+    border:2px solid rgb(109, 113, 109);
+    padding-bottom: 1.5%;
+    padding-top: 3%;
+    padding-right: 1.2%;
+    padding-left: 1.2%;
+    margin: auto;
+    margin-top: 7%;
+    margin-bottom: 7%;
+}
+
+.font{
+    font-family: 'Noto Sans Multani', sans-serif;
+    font-weight: 700px;
+    font-size: 1.22em;
+    color: rgb(0, 0, 0);
+}    
+
+.submit{
+    font-family: 'Noto Sans Multani', sans-serif;
+    font-size: 90.7%;
+    margin-left: 26%;
+    margin-right: 26%;
+    margin-top: 5%;
+ }
+
+.btn1{
+    background-color: #0a89ff;
+    border:4px solid rgb(16, 20, 255);
+    color: rgb(255, 255, 255);
+    font-size: 1rem;
+    margin-top: 2%;
+    border-radius: 18px;
+    width : 40%;
+    margin-bottom: 4%;
+    align-content: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.widget input{
+    display:block;
+    background-color: #ffffff;
+    margin-bottom: 5%;
+    padding: 3%;
+    color: hwb(0 0% 100%);
+    font-size: 1rem;
+    width:90%; 
+    border:2px solid rgb(109, 113, 109);
+    border-radius: 18px;
+    margin-top:5px; 
+    
+}
+.submit{
+    font-family: 'Noto Sans Multani', sans-serif;
+    font-size: 90.7%;
+    margin-left: 26%;
+    margin-right: 26%;
+    margin-top: 1em;
+ }
+
+#message{
+    display:block;
+    background-color: #ffffff;
+    margin-bottom: 5%;
+    padding: 3%;
+    color: hwb(0 0% 100%);
+    font-size: 1rem;
+    width:90%; 
+    border:2px solid rgb(109, 113, 109);
+    border-radius: 18px;
+    margin-top:5px; 
+ }
 
 
 

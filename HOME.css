@@ -1,3 +1,6 @@
+html {
+    scroll-behavior: smooth;
+  }
 body{
     margin: 0px;
 }
@@ -14,14 +17,14 @@ hr{
     width: 1.8em;
 }
 
-.nav-items{
-    text-align: left;
+.nav-item{
+    margin-right: 1em;
 }
 
 .navbar{
-    z-index: 2;
-    }
-
+    position: sticky;
+    z-index: 4;
+}
 
 
 
@@ -93,10 +96,10 @@ hr{
 }
 
 .abt-us1{
-    font-size: calc(1.375rem + 1.5vw);
-    width: 5em;
-    margin: auto;
-    margin-bottom: 1em;
+    font-size: 2rem;
+    width: 8em;
+    margin: 1em auto 0 auto;
+    margin-bottom: 10px;
 }
 
 .abt{

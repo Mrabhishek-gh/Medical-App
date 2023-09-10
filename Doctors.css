@@ -1,57 +1,83 @@
-.doctor-card {
-    border: 10px solid #0d0101;
-    border-radius: 50px;
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 20px;
-    text-align: left;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    max-width: 10000px;
-    max-height: 200px;
-    margin: 10px;
-    display: table-footer-group;
+}
+
+.doctor-box {
+
+    width: 315px;
+    /* Set the desired width */
+    height: 472px;
+    /* Set the desired height */
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+    transition: transform 0.3s;
+    justify-content: space-between;
+}
+
+.doctor-box:hover {
+    transform: scale(1.05);
+}
+
+h1 {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #16595B;
+}
+
+.doctor-box h3 {
+    color: #3fbbc0;
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
     text-align: center;
 }
 
-.doctor-card img {
-    
-    border-radius: 10%;
-    margin-bottom: 20px;
-    max-height: 200px;
-    max-width: 200px;
-    margin-top: 30px;
-    margin-bottom: 20px;
-    
-}
-.doctor-card-content {
-    margin-right: 50px;
-    flex: 1; /* Allow the content to take up remaining space */
-    
-}
-.container h1 {
-    text-align: center;
-}
-.doctor-card h3 {
-    margin-top: 5px;
-    font-size: 1.5em;
-    color: #333;
+.doctor-box p {
+    font-size: 0.85rem;
+    white-space: 1;
+
 }
 
-.doctor-card p {
-    margin: 5px 0;
-    color: #666;
+.doctor-image {
+    width: 185px;
+    max-width: fit-content;
+    /* Set the desired width */
+    height: 185px;
+    /* Set the desired height */
+    object-fit: cover;
+    /* Maintain aspect ratio and cover container */
+    border-radius: 5%;
+    ;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2)
 }
 
-.doctor-card button {
-    background-color: #007bff;
-    border-radius: 20px;
-    color: #fff;
-    border: black;
-    padding: 10px 10px;
-    margin: 20px;
-    margin: 3px auto 5px auto;
-    width: 11em;
-    cursor: pointer;
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 
+
+
+
+
+@media (max-width: 768px) {
+    /* Styles for screens up to 768px wide */
+}
+
+@media (max-width: 576px) {
+    /* Styles for screens up to 576px wide (typically mobile screens) */
+}
 
   

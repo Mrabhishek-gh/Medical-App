@@ -16,31 +16,101 @@
 div {
     display: block;
 }
-
+/* Apply general styles to the page */
 body {
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    padding: 0;
+  }
+  
+  /* Navbar styles */
+  
+ 
+ 
+  
+  /* Header styles */
+  .my-5 {
+    text-align: center;
+    padding: 40px 0;
+    background-color: #f8f9fa;
+  }
+  
+  .blue-color {
+    color: #007BFF;
+  }
+  
+  .fs-5 {
+    font-size: 18px;
+  }
+  
+  /* Card styles */
+  .card {
+    border: none;
+    border-radius: 10px;
+    transition: transform 0.3s;
+    margin-bottom: 20px;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .card-title {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .card-body {
+    padding: 20px;
+  }
+  
+  .card img {
+    object-fit: cover;
+  }
+  
+  /* Button styles */
+  .default-btn {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .default-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .navbar-toggler-icon {
+      background-color: #007BFF;
+    }
+  
+    .navbar-collapse {
+      background-color: #007BFF;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .navbar-brand {
+      font-size: 20px;
+    }
+  
+    .card-title {
+      font-size: 20px;
+    }
+  }
+  
+
+
+*, :after, :before {
+    box-sizing: border-box;
 }
 
-body {
-    margin: 0;
-    font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-    font-family: var(--bs-body-font-family);
-    font-size: 1rem;
-    font-size: var(--bs-body-font-size);
-    font-weight: 400;
-    font-weight: var(--bs-body-font-weight);
-    line-height: 1.5;
-    line-height: var(--bs-body-line-height);
-    color: #212529;
-    color: var(--bs-body-color);
-    text-align: var(--bs-body-text-align);
-    background-color: #fff;
-    background-color: var(--bs-body-bg);
-    -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: transparent;
+*, :after, :before {
+    box-sizing: border-box;
 }
 
 button:not(:disabled) {

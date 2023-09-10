@@ -1,6 +1,4 @@
-.blue-color{
-    color: crimson;
-}
+
 
 .text-center {
     text-align: center!important;
@@ -23,7 +21,6 @@ body {
     padding: 0;
   }
   
-  /* Navbar styles */
   
  
  
@@ -80,10 +77,9 @@ body {
   
   .default-btn:hover {
     background-color: #0056b3;
-  }
+  } 
   
-  /* Responsive styles */
-  @media (max-width: 768px) {
+  /* @media (max-width: 768px) {
     .navbar-toggler-icon {
       background-color: #007BFF;
     }
@@ -101,7 +97,7 @@ body {
     .card-title {
       font-size: 20px;
     }
-  }
+  } */
   
 
 
@@ -118,15 +114,47 @@ button:not(:disabled) {
 }
 
 .default-btn {
-    background-color: #482576;
-    width: 150px;
-    height: 35px;
-    margin-top: 10px;
-    border-radius: 10px;
-    font-weight: 700;
-    border: 2px solid #482576;
-    background-color: #fff;
-    color: #482576;
-    font-size: 16px;
-    cursor: pointer;
+  background-color: #482576;
+  width: 197px;
+  height: 49px;
+  margin-top: 10px;
+  border-radius: 10px;
+  font-weight: 700;
+  border: 2px solid #482576;
+  background-color: #fff;
+  color: #482576;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body{
+  margin: 0px;
+}
+
+hr{
+  border-style: dotted none none none;
+  border-color: #000000;
+  border-width: 8px;
+  width: 4%;
+  margin: 5em auto 3em auto;
+  opacity: 1;
+}   
+.logo{
+  width: 1.8em;
+}
+
+.nav-item{
+  margin-right: 1em;
+}
+
+.navbar{
+  position: sticky;
+  z-index: 4;
+}
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
 }

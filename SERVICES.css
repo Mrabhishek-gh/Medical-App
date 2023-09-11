@@ -27,17 +27,23 @@ body {
   
   /* Header styles */
   .my-5 {
+    font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     padding: 40px 0;
     background-color: #f8f9fa;
   }
   
   .blue-color {
-    color: #007BFF;
+    color: #16595b;
   }
   
   .fs-5 {
+  
     font-size: 18px;
+  }
+
+  .text-center b{
+    color: #16595b;
   }
   
   /* Card styles */
@@ -76,7 +82,7 @@ body {
   }
   
   .default-btn:hover {
-    background-color: #0056b3;
+    background-color: #3fbbc0;
   } 
   
   /* @media (max-width: 768px) {
@@ -114,15 +120,15 @@ button:not(:disabled) {
 }
 
 .default-btn {
-  background-color: #482576;
+  background-color:transparent;
   width: 197px;
   height: 49px;
   margin-top: 10px;
   border-radius: 10px;
   font-weight: 700;
-  border: 2px solid #482576;
+  border: 2px solid #16595b;
   background-color: #fff;
-  color: #482576;
+  color: #16595b;
   font-size: 16px;
   cursor: pointer;
 }

@@ -6,7 +6,7 @@ from datetime import datetime
 
 # from PIL import ImageGrab
 
-path = 'Medical-App/Attendence_System/Training images'
+path = 'Attendence_System\Training images'
 images = []
 classNames = []
 alredy_attended = []
@@ -31,7 +31,7 @@ def findEncodings(images):
 
 
 def markAttendance(name,already_attended):
-    with open('Medical-App/Attendence_System/Attendance.csv', 'r+') as f:
+    with open('Attendence_System\Attendance.csv', 'r+') as f:
         myDataList = f.readlines()
 
 

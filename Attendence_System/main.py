@@ -27,7 +27,7 @@ def findEncodings(images):
     return encodeList
 
 def video_overlay(bgimg,img,location):
-    # img2=cv2.resize(img2,(500,500)) 
+    img=cv2.resize(img,(281,455)) 
     # h,w=img1.shape[:2]
     h1,w1=img.shape[:2]
     x,y=location
@@ -60,8 +60,6 @@ encodeListKnown = findEncodings(images)
 print('Encoding Complete')
 
 bgimg=cv2.imread('RESOURCES\CARDS\BACKGROUND.jpg')
-bgimg = cv2.cvtColor(bgimg, cv2.COLOR_BGR2RGB)
-# img1 = cv2.resize(img1, (1000, 1000))
 print("dimensions=" , bgimg.shape)
 
 cap = cv2.VideoCapture(0)
@@ -71,13 +69,13 @@ cap.set(4, 480)
 
 while True:
     success, img = cap.read()
-    merge=video_overlay(bgimg,img,location=(100,100)) 
+    merge=video_overlay(bgimg,img,location=(37,80)) 
     cv2.namedWindow("Merge", cv2.WINDOW_NORMAL)
     cv2.resizeWindow("Merge", 700, 800)
-    imgS = cv2.resize(img, (0, 0), None, 0.25, 0.25)
-    imgS = cv2.cvtColor(imgS, cv2.COLOR_BGR2RGB)
-    facesCurFrame = face_recognition.face_locations(imgS)
-    encodesCurFrame = face_recognition.face_encodings(imgS, facesCurFrame)
+    # imgS = cv2.resize(img, (0, 0), None, 0.25, 0.25)
+    img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+    facesCurFrame = face_recognition.face_locations(img)
+    encodesCurFrame = face_recognition.face_encodings(img, facesCurFrame)
 
     for encodeFace, faceLoc in zip(encodesCurFrame, facesCurFrame):
         matches = face_recognition.compare_faces(encodeListKnown, encodeFace)
@@ -95,6 +93,7 @@ while True:
     cv2.imshow("Merge",merge)
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
+
 
 # /////////////////////////////////////////////////////////////////////
 

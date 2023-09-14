@@ -31,6 +31,12 @@ data = {
         'DEPT': "Pathologist",
         'YEARS': "15"
     },
+        "1234":
+    {
+        'NAME': "Dr Sneha Roy",
+        'DEPT': "Cardiologist",
+        'YEARS': "15"
+    },
 }
 
 

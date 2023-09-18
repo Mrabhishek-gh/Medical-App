@@ -10,6 +10,8 @@ path = 'Attendence_System/Training images'
 images = []
 classNames = []
 alredy_attended = []
+marked = False 
+
 myList = os.listdir(path)
 print(myList)
 for cl in myList:
@@ -43,7 +45,7 @@ def image_overlay(bgimg,img2,location2):
     bgimg[y:y+h1,x:x+w1]=img2
     return bgimg
 
-def markAttendance(name,alredy_attended):
+def markAttendance(name,alredy_attended,marked):
     with open('Attendence_System\Attendance.csv', 'r+') as f:
         myDataList = f.readlines()
 
@@ -58,9 +60,10 @@ def markAttendance(name,alredy_attended):
                 dtString = now.strftime("%m/%d/%Y,%H:%M:%S")
                 f.writelines(f'\n{name},{dtString}')
                 alredy_attended.append(name)
-            else:
+                marked = True
+            elif name in alredy_attended and marked:
                 print(("ALREADY MARKED"))
-                break
+                marked = False
 
 encodeListKnown = findEncodings(images)
 print('Encoding Complete')
@@ -109,7 +112,7 @@ while True:
             cv2.rectangle(img, (x1, y1), (x2, y2), (0, 255, 0), 2)
             cv2.rectangle(img, (x1, y2 - 35), (x2, y2), (0, 255, 0), cv2.FILLED)
             cv2.putText(img, name, (x1 + 6, y2 - 6), cv2.FONT_HERSHEY_COMPLEX, 1, (255, 255, 255), 2)
-            markAttendance(name, alredy_attended)
+            markAttendance(name, alredy_attended,marked)
 
     cv2.imshow("Merge",merge)
     if cv2.waitKey(1) & 0xFF == ord('q'):

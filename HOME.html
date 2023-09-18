@@ -4,6 +4,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script> 
     <link rel="stylesheet" href="HOME.css">
+    <link rel="stylesheet" href="style.css"> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Allison&display=swap" rel="stylesheet">
@@ -116,62 +117,104 @@
     </div>
   </div>
 
+
   <div class="container3" id="c3">
     <section id="appointment-section">
       <h2 class="abt-us2">CONTACT OUR GENERAL DOCTOR</h2>
     </section>
 
-    <div class="Outerbox">
-      <div id="general">
-          <section id="subscription" class="widget">
-              <form id="myForm" method="post" action="/">
-                  <label class="font" for="Username">Name</label>
-                  <input class="size" type="text" id="Username" name="Username" required>
+    <form action="" method="POST" id="registrationform">
+      <!-- Section 1 -->
+      <label class="" for="name">Name:</label>
+      <input type="text" name="name" value="" id="name" required />
 
-                  <label class="font" for="Email">Email-ID(OPTIONAL)</label>
-                  <input type="email" id="Email" name="Email" placeholder="abc@gmail.com">
+      <label class="" for="email">Email:</label>
+      <input type="email" name="email" value="" id="email" required />
+      
+      <label class="" for="number">Number:</label>
+      <input type="number" name="number" value="" id="number" required />
 
-                  <label class="font" for="Phone-number">Phone Number</label>
-                  <input class="size" type="tel" id="Number" name="Number" required placeholder="+91">
+      <label for="password">Password:</label>
+      <input type="password" name="password" value="" id="password" required />
+      
+      <label class="" for="add">Address:</label>
+      <textarea name="add" id="add" required></textarea>
 
-                  <label class="font" for="message">ADDRESS:</label><br>
-                  <textarea id="message" name="message" rows="2" cols="45"></textarea>
+      <br /><br />
+      <label class="" for="sym">Symptoms:</label>
+      <textarea name="sym" id="sym" required></textarea>
 
-                  <label class="font" for="message">SYMPTOMS:</label><br>
-                  <textarea id="symptoms" name="symptoms" rows="3" cols="45"></textarea>
-
-                  <button type="submit" class="submit btn1">SUBMIT</button>
-              </form>
-          </section>
+      <!-- Add an alert div to display success message -->
+      <div class="alert" style="display: none;">
+          Registration successful!
       </div>
-  </div>
 
-  <!-- <script>
-    // Function to handle form submission
-    function signup(event) {
-        event.preventDefault(); // Prevent the default form submission behavior
+      <button type="submit">Register</button>
+  </form>
+
+  <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
+      import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-database.js";
       
-        // Get form data
-        const name = document.getElementById("Username").value;
-        const email = document.getElementById("Email").value;
-        const phoneNumber = document.getElementById("Number").value;
-        const address = document.getElementById("message").value;
-        const symptoms = document.getElementById("symptoms").value;
+      const firebaseConfig = {
+            apiKey: "AIzaSyCIs9kvNAQ2dDjyoL_JwD9vD7Yc-EjHyno",
+            authDomain: "medlab-f4687.firebaseapp.com",
+            databaseURL: "https://medlab-f4687-default-rtdb.firebaseio.com",
+            projectId: "medlab-f4687",
+            storageBucket: "medlab-f4687.appspot.com",
+            messagingSenderId: "667569513383",
+            appId: "1:667569513383:web:86ee00ceb0301e0c3dcc82"
+};
       
-        // You can now do something with the form data, such as sending it to a server or performing validation.
-        // For example, you can log the data to the console:
-        console.log("Name:", name);
-        console.log("Email:", email);
-        console.log("Phone Number:", phoneNumber);
-        console.log("Address:", address);
-        console.log("Symptoms:", symptoms);
-    }
-    
-    // Add an event listener to the form to call the signup function on form submission
-    const form = document.getElementById("myForm");
-    form.addEventListener("submit", signup);
-</script> -->
-    </div>
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig); 
+      
+      // Listen for submit event
+      document
+          .getElementById('registrationform')
+          .addEventListener('submit', formSubmit);
+
+      // Submit form
+      function formSubmit(e) {
+          e.preventDefault();
+          // Get Values from the DOM
+          let name = document.querySelector('#name').value;
+          let email = document.querySelector('#email').value;
+          let password = document.querySelector('#password').value;
+          let number = document.querySelector('#number').value;
+          let add = document.querySelector('#add').value;
+          let symptoms = document.querySelector('#sym').value;
+
+          // Send message values
+          sendMessage(name, email, password, number, add, symptoms);
+      }
+
+      // Send Message to Firebase
+      function sendMessage(name, email, password, number, add, symptoms) {
+          const database = getDatabase();
+
+          set(ref(database, 'users/' + Math.floor(Math.random() * 10000000)), {
+              name: name,
+              email: email,
+              password: password,
+              number: number,
+              add: add,
+              symptoms: symptoms
+          }).then(() => {
+              // Show Alert Message
+              document.querySelector('.alert').style.display = 'block';
+              // Hide Alert Message After Seven Seconds
+              setTimeout(function () {
+                  document.querySelector('.alert').style.display = 'none';
+              }, 2000);
+              document.getElementById('registrationform').reset();
+          }).catch((error) => {
+              alert(error)
+          })
+      }
+  </script>
+   
+  </div>
 
       <hr>
 
@@ -275,7 +318,6 @@
             });
     </script>
     
-
     <hr>
 
     <div class="container container5">
@@ -318,5 +360,5 @@
       </footer>
     </div>    
 </body>
-<script src="/firebase.js" type="module"></script>
+<!-- <script src="/firebase.js" type="module"></script> -->
 </html>

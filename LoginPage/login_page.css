@@ -1,15 +1,21 @@
 
         body {
             font-family: Arial, sans-serif;
-            
+            background: lightblue url("./images/haspatal.jpg") fixed no-repeat center ;
+            background-size: cover;
+            background-blend-mode: luminosity;
+            backdrop-filter: blur(7px);
             margin: 0;
             padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
+            
            
         }
+
+        
         
         .login-container {
             background-color: #f9fbfd;
@@ -17,6 +23,15 @@
             border-radius: 5px;
             box-shadow: 0px 0px 10px #66d8fbfb;
         }
+
+        .medkit-logo{
+            width: 40px;
+            display: block;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+    
 
         h2 {
             text-align: center;
@@ -59,4 +74,9 @@
          
             display: flex;
             justify-content: center;
+        }
+
+        .background-image{
+            background: lightblue;
+          
         }

@@ -1,7 +1,7 @@
 const { MongoClient } = require("mongodb");
 // Replace the uri string with your connection string.
-const uri = "mongodb+srv://abhishekp492002:RWfwnexVGRDoGDN0@login-id.jocjuex.mongodb.net/";
-const client = new MongoClient(uri);
+const url = "mongodb+srv://abhishekp492002:RWfwnexVGRDoGDN0@login-id.jocjuex.mongodb.net/?retryWrites=true&w=majority";
+const client = new MongoClient(url);
 async function run() {
   try {
     const database = client.db('doc-login');
@@ -15,4 +15,5 @@ async function run() {
     await client.close();
   }
 }
-run().catch(console.dir);
+run();
+

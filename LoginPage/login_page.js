@@ -1,11 +1,15 @@
+
+const jsdom = require('jsdom')
+
 const { MongoClient } = require("mongodb");
 // Replace the uri string with your connection string.
-const uri = "mongodb+srv://abhishekp492002:RWfwnexVGRDoGDN0@login-id.jocjuex.mongodb.net/";
-const client = new MongoClient(uri);
+const url = "mongodb+srv://abhishekp492002:RWfwnexVGRDoGDN0@login-id.jocjuex.mongodb.net/";
+const client = new MongoClient(url);
 async function run() {
   try {
     const database = client.db('doc-login');
     const doctors = database.collection('login-data');
+    // console.log(doctors)
     // Query for a movie that has the title 'Back to the Future'
     const query = { NAME : "Dr Abhishek Ghosh" };
     const user = await doctors.findOne(query);
@@ -15,4 +19,11 @@ async function run() {
     await client.close();
   }
 }
-run().catch(console.dir);
+// run().catch(console.dir);
+run();
+
+
+
+
+
+

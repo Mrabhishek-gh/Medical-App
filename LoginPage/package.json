@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "jsdom": "^23.2.0",
+    "mongodb": "^6.3.0"
+  }
+}

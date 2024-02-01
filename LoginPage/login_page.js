@@ -1,6 +1,6 @@
 
 const jsdom = require('jsdom')
-
+import jsdom from "jsdom"
 const { MongoClient } = require("mongodb");
 // Replace the uri string with your connection string.
 const url = "mongodb+srv://abhishekp492002:RWfwnexVGRDoGDN0@login-id.jocjuex.mongodb.net/?retryWrites=true&w=majority";

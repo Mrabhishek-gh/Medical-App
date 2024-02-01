@@ -1,19 +1,36 @@
 const { MongoClient } = require("mongodb");
 // Replace the uri string with your connection string.
-const url = "mongodb+srv://abhishekp492002:RWfwnexVGRDoGDN0@login-id.jocjuex.mongodb.net/?retryWrites=true&w=majority";
+const url = "mongodb+srv://abhishekp492002:RWfwnexVGRDoGDN0@login.kyro35f.mongodb.net/";
 const client = new MongoClient(url);
-async function run() {
+async function run(username,passord) {
   try {
-    const database = client.db('doc-login');
-    const doctors = database.collection('login-data');
-    // Query for a movie that has the title 'Back to the Future'
-    const query = { NAME : "Dr Abhishek Ghosh" };
+    const database = client.db('CREDENTIALS');
+    const doctors = database.collection('doc-login');
+    // Auth for doctors collection
+    const query = { NAME : username };
     const user = await doctors.findOne(query);
-    console.log(user);
-  } finally {
+    if(user.Password==passord){
+      console.log("Login Successful");
+    }
+    else{
+      console.log("Login Failed");
+    }
+  }
+  catch(err) {
+    console.log(err);
+  }
+  
+    
+   finally {
     // Ensures that the client will close when you finish/error
     await client.close();
   }
 }
-run();
-
+function gather(e){
+  e.preventDefault();
+  var username = document.getElementById("username").value;
+  var passord = document.getElementById("password").value;
+  console.log(email);
+  console.log(passord);
+  run(username,passord);
+}

@@ -6,7 +6,7 @@ from datetime import datetime
 
 
 
-path = 'Attendence_System/Training images'
+path = 'Medical-App\Attendence_System\Training images'
 images = []
 classNames = []
 alredy_attended = []
@@ -46,7 +46,7 @@ def image_overlay(bgimg,img2,location2):
     return bgimg
 
 def markAttendance(name,alredy_attended,marked):
-    with open('Attendence_System\Attendance.csv', 'r+') as f:
+    with open('Medical-App\Attendence_System\Attendance.csv', 'r+') as f:
         myDataList = f.readlines()
 
 
@@ -66,16 +66,16 @@ def markAttendance(name,alredy_attended,marked):
                 marked = False
 
 encodeListKnown = findEncodings(images)
-print('Encoding Complete')
+print(encodeListKnown)
 
-bgimg=cv2.imread('RESOURCES\BACKGROUND.jpg')
+bgimg=cv2.imread('Medical-App\RESOURCES\BACKGROUND.jpg')
 print("dimensions=" , bgimg.shape)
 
 cap = cv2.VideoCapture(0)
 cap.set(3, 640)
 cap.set(4, 480)
 
-folderModepath = 'RESOURCES\CARDS'
+folderModepath = 'Medical-App\RESOURCES\CARDS'
 modePathList = os.listdir(folderModepath)
 
 imgModeList=[]

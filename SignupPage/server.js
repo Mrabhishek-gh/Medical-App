@@ -17,13 +17,13 @@ mongoose.connect("mongodb+srv://abhishekp492002:guddup49@login.xtuioku.mongodb.n
 
 
 
-const usersSchema = new mongoose.Schema({
+const dataSchema = new mongoose.Schema({
     name: String,
     email: String,
     password: String
 }, { collection: 'USER DATABASE' });
 
-const Note = mongoose.model("Note", usersSchema);
+const Note = mongoose.model("Note", dataSchema);
 
 
 app.use(express.static(__dirname))

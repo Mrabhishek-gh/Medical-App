@@ -10,17 +10,20 @@ const app = express();
 
 app.use(bodyParser.urlencoded({extended: true}));
 
-mongoose.connect("mongodb+srv://abhishekp492002:guddup49@login.xtuioku.mongodb.net/")
+mongoose.connect("mongodb+srv://abhishekp492002:guddup49@login.xtuioku.mongodb.net/sample_mflix", {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+});
 
-const notesSchema={
-    
+
+
+const usersSchema = new mongoose.Schema({
     name: String,
     email: String,
-    password : String
+    password: String
+}, { collection: 'USER DATABASE' });
 
-}
-
-const Note = mongoose.model("Note", notesSchema);
+const Note = mongoose.model("Note", usersSchema);
 
 
 app.use(express.static(__dirname))

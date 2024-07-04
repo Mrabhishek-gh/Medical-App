@@ -62,7 +62,7 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">DEPARTMENTS</a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="./Departments/Pathology.html">Pathology</a></li>
+              <li><a class="dropdown-item" href="Departments\Pathology.html">Pathology</a></li>
               <li><a class="dropdown-item" href="./Departments/Neurology.html">Neurology</a></li>
               <li><a class="dropdown-item" href="./Departments/Cardiology.html">Cardiology</a></li>
               <li><a class="dropdown-item" href="./Departments/Radiology.html">Radiology</a></li>
@@ -151,68 +151,6 @@
 
       <button type="submit">Register</button>
   </form>
-
-  <script type="module">
-      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
-      import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-database.js";
-      
-      const firebaseConfig = {
-            apiKey: "AIzaSyCIs9kvNAQ2dDjyoL_JwD9vD7Yc-EjHyno",
-            authDomain: "medlab-f4687.firebaseapp.com",
-            databaseURL: "https://medlab-f4687-default-rtdb.firebaseio.com",
-            projectId: "medlab-f4687",
-            storageBucket: "medlab-f4687.appspot.com",
-            messagingSenderId: "667569513383",
-            appId: "1:667569513383:web:86ee00ceb0301e0c3dcc82"
-};
-      
-      // Initialize Firebase
-      const app = initializeApp(firebaseConfig); 
-      
-      // Listen for submit event
-      document
-          .getElementById('registrationform')
-          .addEventListener('submit', formSubmit);
-
-      // Submit form
-      function formSubmit(e) {
-          e.preventDefault();
-          // Get Values from the DOM
-          let name = document.querySelector('#name').value;
-          let email = document.querySelector('#email').value;
-          let password = document.querySelector('#password').value;
-          let number = document.querySelector('#number').value;
-          let add = document.querySelector('#add').value;
-          let symptoms = document.querySelector('#sym').value;
-
-          // Send message values
-          sendMessage(name, email, password, number, add, symptoms);
-      }
-
-      // Send Message to Firebase
-      function sendMessage(name, email, password, number, add, symptoms) {
-          const database = getDatabase();
-
-          set(ref(database, 'users/' + Math.floor(Math.random() * 10000000)), {
-              name: name,
-              email: email,
-              password: password,
-              number: number,
-              add: add,
-              symptoms: symptoms
-          }).then(() => {
-              // Show Alert Message
-              document.querySelector('.alert').style.display = 'block';
-              // Hide Alert Message After Seven Seconds
-              setTimeout(function () {
-                  document.querySelector('.alert').style.display = 'none';
-              }, 2000);
-              document.getElementById('registrationform').reset();
-          }).catch((error) => {
-              alert(error)
-          })
-      }
-  </script>
    
   </div>
 
@@ -259,7 +197,6 @@
                     and stabilization of patients, with the option to refer to hospitals for more critical cases.</p>
             </div>
         </div>
-
         <!-- Second Row -->
         <div class="row">
             <div class="service-box">

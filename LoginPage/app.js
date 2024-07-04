@@ -44,6 +44,7 @@ app.post('/login_page', async (req, res) => {
         }
 
         // Authentication successful
+        res.redirect('http://127.0.0.1:5500/HOME.html');
         console.log("Succesfull");
     } catch (err) {
         console.error('Error during login:', err);

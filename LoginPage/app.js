@@ -36,7 +36,6 @@ app.post('/login_page', async (req, res) => {
             return res.status(404).send('User not found');
         }
 
-        // Validate password
         if (user.password !== password) {
             console.log("Unsuccessful")
             return res.status(401).send('Invalid password');

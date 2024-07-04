@@ -6,7 +6,8 @@ from datetime import datetime
 
 
 
-path = 'Medical-App\Attendence_System\Training images'
+path = r'Medical-App\Attendence_System\Training images'
+bgimg = cv2.imread(r'Medical-App\RESOURCES\BACKGROUND.jpg')
 images = []
 classNames = []
 alredy_attended = []

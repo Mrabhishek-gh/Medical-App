@@ -86,7 +86,7 @@ hr{
 
 .container2{
     width: 100%;
-    height: 26em;
+
 }
 
 .box1{
@@ -114,6 +114,7 @@ hr{
     margin-right: 13em;
     margin-top: 1.4em;
     text-align: justify;
+    line-height: 2em;
 }
 
 
@@ -301,6 +302,10 @@ hr{
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+}
+
+.color{
+    color: #16595B;
 }
 
 .doctor-box {

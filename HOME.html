@@ -135,7 +135,7 @@
 
   <div class="container3" id="c3">
     <section id="appointment-section">
-      <h2 class="abt-us2">CONTACT OUR GENERAL DOCTOR</h2>
+      <h2 class="abt-us2">CONTACT OUR GENERAL DOCTOR TODAY !</h2>
     </section>
 
     <form action="/" method="POST" id="registrationform">
@@ -148,8 +148,8 @@
       <label class="" for="number">Number:</label>
       <input type="number" name="number" value="" id="number" required />
 
-      <label for="password">Password:</label>
-      <input type="password" name="password" value="" id="password" required />
+      <label for="password">Age:</label>
+      <input type="number" name="age" value="" id="age" required />
       
       <label class="" for="add">Address:</label>
       <textarea name="add" id="add" required></textarea>
@@ -161,9 +161,16 @@
       <div class="alert" style="display: none;">
           Registration successful!
       </div>
-
-      <button type="submit">Register</button>
+      <div style="display: flex; justify-content: center;">
+        <button type="submit" onclick="showAlert()">Register</button>
+      </div>
   </form>
+
+  <script>
+    function showAlert() {
+        alert("Form submitted successfully!");
+    }
+</script>
    
   </div>
 
@@ -254,10 +261,8 @@
     <div id="doctors-content"></div>
 
     <script>
-        // Using JavaScript to include the content of Doctors.html
         const doctorsContent = document.getElementById('doctors-content');
   
-        // Fetch the Doctors.html file and insert its content into the doctors-content div
         fetch('Doctors.html')
             .then(response => response.text())
             .then(data => {
@@ -310,5 +315,5 @@
       </footer>
     </div>    
 </body>
-<!-- <script src="/firebase.js" type="module"></script> -->
+
 </html>

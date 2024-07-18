@@ -21,7 +21,7 @@ const dataSchema = new mongoose.Schema({
     name: String,
     email: String,
     number: String,
-    password: String,
+    age: String,
     add: String,
     sym: String
 }, { collection: 'USERS' });
@@ -44,7 +44,7 @@ app.post("/", function (req, res) {
         name: req.body.name,
         email: req.body.email,
         number: req.body.number,
-        password:req.body.password,
+        age:req.body.age,
         add:req.body.add,
         sym:req.body.sym
     })
